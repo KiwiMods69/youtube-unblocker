@@ -1,0 +1,13 @@
+javascript:(function() {
+  var videoId = prompt('Enter the YouTube video ID:');
+  if (videoId) {
+    var url = 'https://www.youtube.com/embed/' + videoId;
+    var frame = document.createElement('iframe');
+    frame.src = url;
+    frame.width = '560';
+    frame.height = '315';
+    frame.frameBorder = '0';
+    document.body.innerHTML = '';
+    document.body.appendChild(frame);
+  }
+})();
